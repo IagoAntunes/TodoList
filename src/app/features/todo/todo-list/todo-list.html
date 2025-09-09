@@ -1,0 +1,39 @@
+<div class="todo-list-page-container">
+    <img src="img_logo.svg" alt="">
+    <div class="todo-list-status">
+        <div class="created-tasks">
+            <span>Tarefas criadas </span>
+            <div class="created-task-count">
+                <span>{{tasksCreated}}</span>
+            </div>
+        </div>
+        <div class="done-tasks">
+            <span>Concluídas </span>
+            <div class="done-task-count">
+                <span>{{tasksDone}}</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="todo-list-content">   
+        @if (isAddingTask) {
+            <app-input-new-task (onCancelAddingTask)="onCancelAddingTask()" (onAddTask)="onAddTask($event)">
+
+            </app-input-new-task>
+        }@else {
+            <button mat-flat-button class="btn-add-task" (click)="onChangeToIsAddingTask()">
+                    <mat-icon class="mat-icon-add">add</mat-icon>
+                    Nova tarefa
+            </button>
+        }
+    </div>
+    
+    @for (item of tasks; track $index) {
+        <app-item-task [task]="item"
+            (deleteEvent)="handleDelete(item.id)"
+            (editEvent)="handleEdit(item.id, $event)"
+            (changeStatusEvent)="handleStatusChange(item.id, $event)"
+        ></app-item-task>
+        <div class="divider"></div>
+    }
+</div>

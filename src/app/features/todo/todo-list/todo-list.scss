@@ -1,0 +1,100 @@
+.todo-list-page-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    width: 500px;
+    margin: 0 auto;
+
+    img{
+        height: 50px;
+        width: 150px;
+
+        align-self: flex-start;
+    }
+
+
+    .todo-list-status{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+
+        margin-top: 32px;
+        margin-bottom: 12px;
+
+        .created-tasks{
+            display: flex;
+            flex-direction: row;
+            gap: 6px;
+            align-items: center;
+
+            .created-task-count{
+                background: #E9CCE1;
+                padding-left: 8px;
+                padding-right: 8px;
+                padding-top: 4px;
+                padding-bottom: 4px;
+                border-radius: 999px;
+
+                span{
+                    color: #884074;
+                    font-weight: bold;
+                }
+            }
+        }
+        
+        .done-tasks{
+            display: flex;
+            flex-direction: row;
+            gap: 6px;
+            align-items: center;
+
+            .done-task-count{
+                background: #CDDFCC;
+                padding-left: 8px;
+                padding-right: 8px;
+                padding-top: 4px;
+                padding-bottom: 4px;
+                border-radius: 999px;
+
+                span{
+                    color: #2F5C2D;
+                    font-weight: bold;
+                }
+            }
+        }
+
+        span{
+            color: #7A6E76;
+        }
+
+    }
+
+    .todo-list-content{
+        width: 100%;
+        display: flex;
+        margin-bottom: 12px;
+    }
+
+    .btn-add-task{
+        background: #F4E6F0;
+        width: 100%;
+        padding: 24px;
+
+        .mat-icon-add{
+            color: #C257A4;
+        }
+
+    }
+
+    .divider{
+        margin-top: 4px;
+        margin-bottom: 4px;
+    }
+
+
+
+}

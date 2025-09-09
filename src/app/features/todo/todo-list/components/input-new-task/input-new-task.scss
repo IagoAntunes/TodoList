@@ -1,0 +1,68 @@
+:host {
+    width: 100%;
+    display: block;
+}
+
+.input-new-task{
+    width: 100%;
+    background: #FFFFFF;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    padding: 0 20px;
+    border-radius: 8px;
+
+    input{
+        flex-grow: 1;
+        border: none;
+        padding: 20px 0; 
+        background-color: transparent;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    .actions-new-task{
+        display: flex;
+        flex-direction: row;
+        gap: 8px;
+        flex-shrink: 0;
+
+        .btn-close{
+            background: #F4E6F0;
+            border-radius: 4px;
+        }
+
+        .btn-add{
+            background: #52A350;
+            border-radius: 4px;
+        }
+
+        .btn-close, .btn-add {
+            height: 24px;
+            width: 24px;
+
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+
+        }
+
+        .btn-close svg {
+            color: #C257A4; 
+        }
+
+        .btn-add svg {
+            color: white; 
+        }
+
+        img {
+            height: 16px;
+            width: 16px;
+            align-self: center;
+        }
+    }
+}
